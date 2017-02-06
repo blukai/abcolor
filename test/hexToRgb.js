@@ -1,7 +1,7 @@
 const test = require('ava');
 
 const { hexToRgb } = require('../');
-const colors = require('./data');
+const colors = require('../src/colors');
 
 test('3-char without #', t => t.deepEqual(
   hexToRgb(colors.tri.hex),

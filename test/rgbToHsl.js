@@ -1,7 +1,7 @@
 const test = require('ava');
 
 const { rgbToHsl } = require('../');
-const colors = require('./data');
+const colors = require('../src/colors');
 
 test('rgb integer', t => t.deepEqual(
   rgbToHsl(colors.tri.rgb),
