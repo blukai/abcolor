@@ -2,7 +2,7 @@
   "extends": "airbnb/base",
   "rules": {
     "comma-dangle": ["error", "never"],
-    "max-len": ["error", 125],
-    "no-bitwise": ["error", { "allow": ["&", ">>"] }]
+    "no-bitwise": ["error", { "allow": ["&", ">>"] }],
+    "global-require": "warn"
   }
 }
