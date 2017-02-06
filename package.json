@@ -1,0 +1,13 @@
+{
+  "name": "abcolor",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint . --ext .js --fix"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "author": "blukai"
+}
