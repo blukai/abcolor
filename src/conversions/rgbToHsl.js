@@ -1,7 +1,7 @@
 const { isNumeric } = require('../utility');
 
 const rgbToHsl = (rgb) => {
-  if (Array.isArray(rgb) && rgb.every(val => isNumeric(val))) {
+  if (rgb && Array.isArray(rgb) && rgb.every(val => isNumeric(val))) {
     // The R,G,B values are divided by 255 to change the range from 0..255 to 0..1
     const [r, g, b] = rgb.map(val => val / 255);
 

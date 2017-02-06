@@ -1,13 +1,21 @@
 {
   "name": "abcolor",
   "version": "0.0.0",
+  "author": "blukai",
+  "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .js --fix"
+    "lint": "eslint .",
+    "ava": "ava test/*.js --verbose",
+    "test": "npm run lint && npm run ava"
+  },
+  "engines": {
+    "node": ">=6.9.2"
   },
   "devDependencies": {
+    "ava": "^0.18.1",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-ava": "^4.0.1",
     "eslint-plugin-import": "^2.2.0"
-  },
-  "author": "blukai"
+  }
 }

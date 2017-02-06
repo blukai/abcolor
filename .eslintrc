@@ -1,5 +1,6 @@
 {
   "extends": "airbnb/base",
+  "plugins": ["ava"],
   "rules": {
     "comma-dangle": ["error", "never"],
     "no-bitwise": ["error", { "allow": ["&", ">>"] }],
