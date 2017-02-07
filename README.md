@@ -1,5 +1,7 @@
 ## Usage
 #### Gradient, <sub>But actually, not quite gradient<sub>
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/blukai/abcolor.svg)](https://greenkeeper.io/)
 ```js
 const { gradient } = require('abcolor');
 
