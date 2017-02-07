@@ -2,14 +2,14 @@
   "name": "abcolor",
   "version": "0.0.0",
   "author": "blukai",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "ava": "ava test/*.js --verbose",
     "test": "npm run lint && npm run ava"
   },
   "engines": {
-    "node": ">=6.9.2"
+    "node": ">=6.9.0"
   },
   "devDependencies": {
     "ava": "^0.18.1",
