@@ -1,7 +1,19 @@
 {
   "name": "abcolor",
-  "version": "0.0.0",
-  "author": "blukai",
+  "description": "🎨 Color conversion & tool, that helps to visualize..",
+  "version": "0.2.0",
+  "author": {
+    "name": "blukai",
+    "url": "https://github.com/blukai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blukai/abcolor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blukai/abcolor/issues"
+  },
+  "license": "MIT",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint . --fix",
@@ -17,5 +29,21 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-ava": "^4.0.1",
     "eslint-plugin-import": "^2.2.0"
-  }
+  },
+  "keywords": [
+    "color",
+    "colors",
+    "hex",
+    "rgb",
+    "hsl",
+    "conversion",
+    "convert",
+    "visuzlization",
+    "percent",
+    "style",
+    "styles",
+    "line",
+    "map",
+    "tool"
+  ]
 }
