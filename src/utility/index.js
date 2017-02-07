@@ -8,8 +8,7 @@ const hashChar = (str) => {
   return str;
 };
 
-const aHex = str => (typeof str === 'string' || isNumeric(str))
-  && /^([0-9a-f]{3}){1,2}$/i.test(str);
+const aHex = str => /^#?([0-9a-f]{3}){1,2}$/i.test(str);
 
 // RGB, HSL, HSV(HSB) are consists of three numbers, Tri means three :)
 const aTri = arr => Array.isArray(arr)

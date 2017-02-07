@@ -22,6 +22,6 @@ test('should throw an err if 1st param (Hex) is wrong', t => t.throws(
   () => hexToRgb(null)
 ));
 
-test('should throw an err if 2st param (percent) is wrong', t => t.throws(
+test('should throw an err if 2st param (Percent) is wrong', t => t.throws(
   () => hexToRgb(colors.h3, 'percent')
 ));
