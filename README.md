@@ -1,5 +1,5 @@
 ## Usage
-#### Gradient
+#### Gradient, <sub>But actually, not quite gradient<sub>
 ```js
 const { gradient } = require('abcolor');
 
