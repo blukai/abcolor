@@ -1,9 +1,33 @@
-const { isNumeric, aHex, aTri, lc } = require('./utility');
+const {
+  isNumeric,
+  aHex,
+  aTri,
+  lc,
+  formatRgb,
+  formatHsl
+} = require('./utility');
 const colors = require('./colors');
 const hexToRgb = require('./conversions/hexToRgb');
 const rgbToHsl = require('./conversions/rgbToHsl');
 
-module.exports = (percent, options) => {
+const processСolor = (stage, options, o) => {
+  let res = (stage === 'from' && colors.red[o.model]) || (stage === 'to' && colors.green[o.model]);
+
+  if (options && options[stage]) {
+    res = options[stage];
+
+    if (aHex(res)) {
+      res = hexToRgb(res);
+    }
+    if (aTri(res) && o.model === 'hsl') {
+      res = rgbToHsl(res);
+    }
+  }
+
+  return res;
+};
+
+const gradient = (percent, options) => {
   if (percent && isNumeric(percent)) {
     if (!options || typeof options === 'object') {
       const o = {};
@@ -13,25 +37,10 @@ module.exports = (percent, options) => {
         ? lc(options.model)
         : 'hsl';
 
-      const processСolor = (stage) => {
-        let res = (stage === 'from' && colors.red[o.model]) || (stage === 'to' && colors.green[o.model]);
+      o.from = processСolor('from', options, o);
+      o.to = processСolor('to', options, o);
 
-        if (options && options[stage]) {
-          res = options[stage];
-
-          if (aHex(res)) {
-            res = hexToRgb(res);
-          }
-          if (aTri(res) && o.model === 'hsl') {
-            res = rgbToHsl(res);
-          }
-        }
-
-        return res;
-      };
-
-      o.from = processСolor('from');
-      o.to = processСolor('to');
+      o.css = options && options.css && options.css === true;
 
       const { from, to } = o;
 
@@ -44,15 +53,13 @@ module.exports = (percent, options) => {
       );
 
       // Transform into css
-      o.css = options && options.css && options.css === true;
-
       let result = color;
 
       if (o.css === true) {
         if (o.model === 'hsl') {
-          result = `hsl(${color.map((val, i) => (i > 0 ? `${val}%` : val))})`;
+          result = formatHsl(color);
         } else if (o.model === 'rgb') {
-          result = `rgb(${color.join()})`;
+          result = formatRgb(color);
         }
       }
 
@@ -64,3 +71,5 @@ module.exports = (percent, options) => {
 
   throw new TypeError('Wrong 1st param (Percent must be a number)');
 };
+
+module.exports = gradient;

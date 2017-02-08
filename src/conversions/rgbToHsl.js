@@ -1,6 +1,9 @@
-const { aTri } = require('../utility');
+const {
+  aTri,
+  formatHsl
+} = require('../utility');
 
-const rgbToHsl = (rgb) => {
+const rgbToHsl = (rgb, css = false) => {
   if (rgb && aTri(rgb)) {
     // The R,G,B values are divided by 255 to change the range from 0..255 to 0..1
     const [r, g, b] = rgb.map(val => val / 255);
@@ -38,7 +41,7 @@ const rgbToHsl = (rgb) => {
       l * 100
     ].map(val => Number(val.toFixed(2)));
 
-    return hsl;
+    return css === true ? formatHsl(hsl) : hsl;
   }
 
   throw new Error('Input must be an array of RGB decimals');

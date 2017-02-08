@@ -30,9 +30,13 @@ hexToRgb('#94f');
 
 hexToRgb('#94f', true);
 // Result: array of RGB Percent values - [60, 26.67, 100]
+
+hexToRgb('#94f', null, true);
+// Result: rgb(153,68,255)
 ```
-  - **`hexadecimal`**- Required, numeric[*](#numeric---string-number--number). Six-digit (9000f0) or three-digit (94f) Hex triplet. It can begins from hash char (#), or not.
-  - **`percent`**- Optional, boolean, `False` by default.
+  - **`hexadecimal`**- Required, numeric[*](#numeric---string-number--number). Six-digit (9000f0) or three-digit (94f) Hex triplet. It can begins from hash char (#), or not
+  - **`percent`**- Optional, boolean, `False` by default
+  - **`css`**- Optional, boolean, `False` by default
 
 #### Hex to HSL
 ```js
@@ -40,8 +44,12 @@ const { hexToHsl } = require('abcolor');
 
 hexToHsl('00a1f1')
 // Result: array of HSL values - [199.92, 100, 47.25]
+
+hexToHsl('00a1f1', true)
+// Result: hsl(199.92,100%,47.25%)
 ```
   - **`hexadecimal`**- Required, numeric[*](#numeric---string-number--number). Six-digit (9000f0) or three-digit (94f) Hex triplet. It can begins from hash char (#), or not.
+  - **`css`**- Optional, boolean, `False` by default
 
 #### RGB to HSL
 ```js
@@ -49,7 +57,11 @@ const { rgbToHsl } = require('abcolor');
 
 rgbToHsl([153, 68, 255]);
 // Result: array of HSL values - [267.27, 100, 63.33]
+
+rgbToHsl([153, 68, 255], true);
+// Result: hsl(267.27,100%,63.33%)
 ```
   - **`rgb`**- Required, array. Array of RGB values (0 - 255 range)
+  - **`css`**- Optional, boolean, `False` by default
 
 ###### [Numeric](https://github.com/blukai/abcolor/blob/master/src/utility/index.js#L1)* - string-number / number

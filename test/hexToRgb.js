@@ -2,6 +2,7 @@ const test = require('ava');
 
 const { hexToRgb } = require('../');
 const colors = require('../src/colors');
+const { formatRgb } = require('../src/utility');
 
 test('3-char without #', t => t.deepEqual(
   hexToRgb(colors.tri.hex),
@@ -16,6 +17,16 @@ test('6-char with #', t => t.deepEqual(
 test('6-char without # in % format', t => t.deepEqual(
   hexToRgb(colors.six.hex, true),
   colors.six.rgbPercent
+));
+
+test('3-char without #, css', t => t.deepEqual(
+  hexToRgb(colors.tri.hex, null, true),
+  `rgb(${colors.tri.rgb})`
+));
+
+test('3-char without #, percent, css', t => t.deepEqual(
+  hexToRgb(colors.tri.hex, true, true),
+  formatRgb(colors.tri.rgbPercent, true)
 ));
 
 test('should throw an err if 1st param (Hex) is wrong', t => t.throws(

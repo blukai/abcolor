@@ -1,12 +1,16 @@
-const { hashChar, aHex } = require('../utility');
+const {
+  hashChar,
+  aHex,
+  formatRgb
+} = require('../utility');
 
-const hexToRgb = (hexadecimal, percent = false) => {
+const hexToRgb = (hexadecimal, percent = false, css = false) => {
   if (hexadecimal) {
     // Remove hash char
     let hex = hashChar(hexadecimal);
 
     if (aHex(hex)) {
-      if (typeof percent === 'boolean') {
+      if (percent === null || typeof percent === 'boolean') {
         // Convert 3-char hex into a 6-char
         if (hex.length === 3) {
           hex = [...hex]
@@ -26,6 +30,15 @@ const hexToRgb = (hexadecimal, percent = false) => {
           rgb = rgb.map(val =>
             Number(((val * 100) / 255).toFixed(percent ? 2 : 0))
           );
+        }
+
+        // CSS formatting
+        if (css === true) {
+          if (percent === true) {
+            rgb = formatRgb(rgb, true);
+          } else {
+            rgb = formatRgb(rgb);
+          }
         }
 
         return rgb;
