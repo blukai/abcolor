@@ -34,7 +34,7 @@ hexToRgb('#94f', true);
 hexToRgb('#94f', null, true);
 // Result: rgb(153,68,255)
 ```
-  - **`hexadecimal`**- Required, numeric[*](#numeric---string-number--number). Six-digit (9000f0) or three-digit (94f) Hex triplet. It can begins from hash char (#), or not
+  - **`hexadecimal`**- Required, string / number. Six-digit (9000f0) or three-digit (94f) Hex triplet. It can begins from hash char (#), or not
   - **`percent`**- Optional, boolean, `False` by default
   - **`css`**- Optional, boolean, `False` by default
 
@@ -48,7 +48,7 @@ hexToHsl('00a1f1')
 hexToHsl('00a1f1', true)
 // Result: hsl(199.92,100%,47.25%)
 ```
-  - **`hexadecimal`**- Required, numeric[*](#numeric---string-number--number). Six-digit (9000f0) or three-digit (94f) Hex triplet. It can begins from hash char (#), or not.
+  - **`hexadecimal`**- Required, string / number. Six-digit (9000f0) or three-digit (94f) Hex triplet. It can begins from hash char (#), or not.
   - **`css`**- Optional, boolean, `False` by default
 
 #### RGB to HSL
