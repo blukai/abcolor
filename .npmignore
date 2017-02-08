@@ -6,3 +6,5 @@ npm-debug.log*
 .gitignore
 .gitattributes
 .travis.yml
+
+header.png
