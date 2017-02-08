@@ -13,11 +13,11 @@ gradient(89, {
 });
 // Result: rgb(234,204,72)
 ```
-  - **`percent`**- Required, numeric*
+  - **`percent`**- Required, numeric[*](#numeric---string-number--number)
   - **`options`**- Optional, object
     - `model:` String, can be `rgb` or `hsl`. `Hsl` by default
-    - `from:` String (Hex) / array (RGB) / numeric[*](#numeric---string-number--number) (Hex). [`Red`](http://www.colorhexa.com/ff0000) by default
-    - `to:` String (Hex) / array (RGB) / numeric[*](#numeric---string-number--number) (Hex). 100% color. [`Green`](http://www.colorhexa.com/00ff00) by default
+    - `from:` String / numeric[*](#numeric---string-number--number) / array (RGB), 0% color. [`Red`](http://www.colorhexa.com/ff0000) by default
+    - `to:` String / numeric[*](#numeric---string-number--number) / array (RGB), 100% color. [`Green`](http://www.colorhexa.com/00ff00) by default
     - `css:` Boolean, `False` by default
 
 ### Conversions
