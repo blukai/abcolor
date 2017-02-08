@@ -7,7 +7,7 @@ module.exports = (percent, options) => {
   if (percent && isNumeric(percent)) {
     if (!options || typeof options === 'object') {
       const o = {};
-      o.model = options && options.model && /^(rgb|hsl)$/.test(options.model) ? options.model : 'hsl';
+      o.model = options && options.model && /^(rgb|hsl)$/.test(options.model.toLowerCase()) ? options.model.toLowerCase() : 'hsl';
 
       const color = (stage) => {
         let res = (stage === 'from' && colors.red[o.model]) || (stage === 'to' && colors.green[o.model]);
