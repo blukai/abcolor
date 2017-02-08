@@ -24,7 +24,7 @@ const hexToRgb = (hexadecimal, percent = false) => {
         // Convert decimal into percent
         if (percent === true) {
           rgb = rgb.map(val =>
-            Number(((val * 100) / 255).toFixed(2))
+            Number(((val * 100) / 255).toFixed(percent ? 2 : 0))
           );
         }
 

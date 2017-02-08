@@ -15,9 +15,12 @@ const aTri = arr => Array.isArray(arr)
   && arr.length === 3
   && arr.every(val => isNumeric(val));
 
+const lc = str => str.toLowerCase();
+
 module.exports = {
   isNumeric,
   hashChar,
   aHex,
-  aTri
+  aTri,
+  lc
 };
