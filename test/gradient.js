@@ -48,6 +48,11 @@ test('10%, model: rgb, css: true', t => t.deepEqual(
   'rgb(230,26,0)'
 ));
 
+test('default 0%', t => t.deepEqual(
+  gradient(0),
+  colors.red.hsl
+));
+
 test('should throw an err if params are empty', t => t.throws(
   () => gradient()
 ));

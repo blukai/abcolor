@@ -30,7 +30,7 @@ const processСolor = (stage, options, o) => {
 };
 
 const gradient = (percent, options) => {
-  if (percent && isNumeric(percent)) {
+  if (percent !== undefined && percent >= 0 && percent <= 100 && isNumeric(percent)) {
     if (!options || typeof options === 'object') {
       const o = {};
 
@@ -71,7 +71,7 @@ const gradient = (percent, options) => {
     throw new TypeError('Wrong 2nd param (Options must be an object)');
   }
 
-  throw new TypeError('Wrong 1st param (Percent must be a number)');
+  throw new TypeError('Wrong 1st param (Percent must be a number, 0 - 100 range)');
 };
 
 module.exports = gradient;
