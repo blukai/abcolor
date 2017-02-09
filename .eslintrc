@@ -4,7 +4,6 @@
   "rules": {
     "comma-dangle": ["error", "never"],
     "no-bitwise": ["error", { "allow": ["&", ">>"] }],
-    "global-require": "warn",
-    "strict": "off"
+    "global-require": "warn"
   }
 }

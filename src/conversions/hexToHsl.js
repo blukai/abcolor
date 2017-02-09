@@ -1,5 +1,3 @@
-'use strict';
-
 const hexToRgb = require('./hexToRgb');
 const rgbToHsl = require('./rgbToHsl');
 
