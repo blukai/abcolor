@@ -1,7 +1,7 @@
 {
   "name": "abcolor",
   "description": "🎨 Color conversion & tool, that helps to visualize..",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "author": {
     "name": "blukai",
     "url": "https://github.com/blukai"
@@ -16,7 +16,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint . --fix",
+    "lint": "eslint .",
     "ava": "ava test/*.js --verbose",
     "test": "npm run lint && npm run ava"
   },

@@ -1,3 +1,5 @@
+'use strict';
+
 const isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
 
 const hashChar = str => (str.charAt(0) === '#' ? str.slice(1) : str);

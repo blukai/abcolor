@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   hexToRgb: require('./conversions/hexToRgb'),
   rgbToHsl: require('./conversions/rgbToHsl'),
