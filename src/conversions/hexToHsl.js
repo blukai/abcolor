@@ -1,8 +1,6 @@
-const hexToRgb = require('./hexToRgb');
-const rgbToHsl = require('./rgbToHsl');
+import hexToRgb from './hexToRgb';
+import rgbToHsl from './rgbToHsl';
 
-const hexToHsl = (hexadecimal, css = false) => rgbToHsl(
+export default (hexadecimal, css = false) => rgbToHsl(
   hexToRgb(hexadecimal), css === true && true
 );
-
-module.exports = hexToHsl;

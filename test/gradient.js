@@ -1,7 +1,6 @@
-const test = require('ava');
-
-const { gradient } = require('../');
-const colors = require('../src/colors');
+import test from 'ava';
+import colors from '../src/colors';
+import { gradient } from '../src';
 
 test('default 10%', t => t.deepEqual(
   gradient(10),

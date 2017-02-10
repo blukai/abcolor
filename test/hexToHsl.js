@@ -1,7 +1,6 @@
-const test = require('ava');
-
-const { hexToHsl } = require('../');
-const colors = require('../src/colors');
+import test from 'ava';
+import colors from '../src/colors';
+import { hexToHsl } from '../src';
 
 test('3-char without #', t => t.deepEqual(
   hexToHsl(colors.tri.hex),

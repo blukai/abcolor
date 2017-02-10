@@ -1,7 +1,7 @@
 {
   "name": "abcolor",
   "description": "🎨 Color conversion & tool, that helps to visualize..",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "author": {
     "name": "blukai",
     "url": "https://github.com/blukai"
@@ -20,7 +20,11 @@
     "ava": "ava test/*.js --verbose",
     "test": "npm run lint && npm run ava",
     "clean": "rm -rf build",
-    "build": "npm test && npm run clean && mkdir build && babel src -d build"
+    "build": "npm test && npm run clean && mkdir build && babel src -d build --no-comments"
+  },
+  "ava": {
+    "require": "babel-register",
+    "babel": "inherit"
   },
   "engines": {
     "node": ">=6.9.0"

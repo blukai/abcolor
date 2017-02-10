@@ -1,14 +1,14 @@
-const {
+import {
   isNumeric,
   aHex,
   aTri,
   lc,
   formatRgb,
   formatHsl
-} = require('./utility');
-const colors = require('./colors');
-const hexToRgb = require('./conversions/hexToRgb');
-const rgbToHsl = require('./conversions/rgbToHsl');
+} from './utility';
+import colors from './colors';
+import hexToRgb from './conversions/hexToRgb';
+import rgbToHsl from './conversions/rgbToHsl';
 
 const processСolor = (stage, options, o) => {
   let res = (stage === 'from' && colors.red[o.model]) || (stage === 'to' && colors.green[o.model]);
@@ -27,7 +27,7 @@ const processСolor = (stage, options, o) => {
   return res;
 };
 
-const gradient = (percent, options) => {
+export default (percent, options) => {
   if (percent !== undefined && percent >= 0 && percent <= 100 && isNumeric(percent)) {
     if (!options || typeof options === 'object') {
       const o = {};
@@ -71,5 +71,3 @@ const gradient = (percent, options) => {
 
   throw new TypeError('Wrong 1st param (Percent must be a number, 0 - 100 range)');
 };
-
-module.exports = gradient;

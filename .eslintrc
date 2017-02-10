@@ -3,7 +3,6 @@
   "plugins": ["ava"],
   "rules": {
     "comma-dangle": ["error", "never"],
-    "no-bitwise": ["error", { "allow": ["&", ">>"] }],
-    "global-require": "warn"
+    "no-bitwise": ["error", { "allow": ["&", ">>"] }]
   }
 }
