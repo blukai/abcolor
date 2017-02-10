@@ -1,12 +1,10 @@
-'use strict';
-
-const {
+import {
   hashChar,
   aHex,
   formatRgb
-} = require('../utility');
+} from '../utility';
 
-const hexToRgb = (hexadecimal, percent = false, css = false) => {
+export default (hexadecimal, percent = false, css = false) => {
   if (hexadecimal) {
     // Remove hash char
     let hex = hashChar(hexadecimal);
@@ -53,5 +51,3 @@ const hexToRgb = (hexadecimal, percent = false, css = false) => {
   }
   throw new Error('Something wrong with given hex value');
 };
-
-module.exports = hexToRgb;

@@ -1,8 +1,7 @@
-const test = require('ava');
-
-const { hexToRgb } = require('../');
-const colors = require('../src/colors');
-const { formatRgb } = require('../src/utility');
+import test from 'ava';
+import colors from '../src/colors';
+import { hexToRgb } from '../src';
+import { formatRgb } from '../src/utility';
 
 test('3-char without #', t => t.deepEqual(
   hexToRgb(colors.tri.hex),

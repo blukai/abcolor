@@ -1,8 +1,7 @@
-const test = require('ava');
-
-const { rgbToHsl } = require('../');
-const colors = require('../src/colors');
-const { formatHsl } = require('../src/utility');
+import test from 'ava';
+import colors from '../src/colors';
+import { rgbToHsl } from '../src';
+import { formatHsl } from '../src/utility';
 
 test('rgb array', t => t.deepEqual(
   rgbToHsl(colors.tri.rgb),

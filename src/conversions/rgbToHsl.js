@@ -1,11 +1,9 @@
-'use strict';
-
-const {
+import {
   aTri,
   formatHsl
-} = require('../utility');
+} from '../utility';
 
-const rgbToHsl = (rgb, css = false) => {
+export default (rgb, css = false) => {
   if (rgb && aTri(rgb)) {
     // The R,G,B values are divided by 255 to change the range from 0..255 to 0..1
     const [r, g, b] = rgb.map(val => val / 255);
@@ -48,5 +46,3 @@ const rgbToHsl = (rgb, css = false) => {
 
   throw new Error('Input must be an array of RGB decimals');
 };
-
-module.exports = rgbToHsl;
