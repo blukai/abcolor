@@ -3,7 +3,7 @@
 ### Gradient
 But actually, not quite gradient
 ```js
-const { gradient } = require('abcolor');
+import { gradient } from 'abcolor';
 
 gradient(89, {
   model: 'rgb',
@@ -23,7 +23,7 @@ gradient(89, {
 ### Conversions
 #### Hex to RGB
 ```js
-const { hexToRgb } = require('abcolor');
+import { hexToRgb } from 'abcolor';
 
 hexToRgb('#94f');
 // Result: array of RGB values - [153, 68, 255]
@@ -40,7 +40,7 @@ hexToRgb('#94f', null, true);
 
 #### Hex to HSL
 ```js
-const { hexToHsl } = require('abcolor');
+import { hexToHsl } from 'abcolor';
 
 hexToHsl('00a1f1')
 // Result: array of HSL values - [199.92, 100, 47.25]
@@ -53,7 +53,7 @@ hexToHsl('00a1f1', true)
 
 #### RGB to HSL
 ```js
-const { rgbToHsl } = require('abcolor');
+import { rgbToHsl } from 'abcolor';
 
 rgbToHsl([153, 68, 255]);
 // Result: array of HSL values - [267.27, 100, 63.33]
