@@ -1,5 +1,14 @@
 ![abcolor](header.png)
-## Usage 
+[![Build Status](https://travis-ci.org/blukai/abcolor.svg?branch=master)](https://travis-ci.org/blukai/abcolor)
+
+🎨 Color conversion and tool, that helps to visualize some data.
+
+Looking for example to use abcolor? Head over to [opendota.com](https://www.opendota.com/heroes).
+
+## Installation
+`npm install --save abcolor`
+
+## Usage
 ### Gradient
 But actually, not quite gradient
 ```js
