@@ -7,7 +7,6 @@ Looking for example to use abcolor? Head over to [opendota.com](https://www.open
 
 ## Installation
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/blukai/abcolor.svg)](https://greenkeeper.io/)
 `npm install --save abcolor`
 
 ## Usage
